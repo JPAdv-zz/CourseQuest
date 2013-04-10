@@ -42,15 +42,20 @@ Pushing Changes:
 Once you feel you have done enough and think you are ready to push your changes:
 
 *	Add & commit your changes.
+
 		git add	.
 		git commit
+
 	Commit will open a text editor. Type a brief summary of the changes you have made.
 
 *	Go back to your *master* branch and merge your changes.
+
 		git checkout master
 		git merge myEdits
+
 	This should merge the changes you made and you are ready to push.
 *	Push your changes to the main repository.
+
 		git push origin master
 
 Make a pull request:
