@@ -64,6 +64,15 @@ Make a pull request:
 Once you have done and you feel that your changes are noteworthy, make a pull request.
 Your pull request will be viewed and be merged to this repository.
 
+Alternatively:
+--------------
+
+You can use github's GUI client: 
+
+-	[Mac Version](http://mac.github.com)
+-	[Windows Version](http://windows.github.com)
+-	Ubuntu Versions: There are a couple of open sourced projects. Use Google.
+
 What happens next?:
 -------------------
 
