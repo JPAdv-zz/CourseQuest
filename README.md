@@ -71,7 +71,7 @@ You can use github's GUI client:
 
 -	[Mac Version](http://mac.github.com)
 -	[Windows Version](http://windows.github.com)
--	Ubuntu Versions: There are a couple of open sourced projects. Use Google.
+-	Ubuntu Versions: There are a couple of open sourced projects. [Use Google](http://www.google.com)
 
 What happens next?:
 -------------------
