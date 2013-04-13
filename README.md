@@ -1,7 +1,7 @@
 CourseQuest
 -----------
 
-CourseQuest is a simple website that enables to search and discover courses from Coursera and Canvas.
+CourseQuest is a simple website that enables search and discover courses from Coursera and Canvas.
 
 Installation:
 --------------
