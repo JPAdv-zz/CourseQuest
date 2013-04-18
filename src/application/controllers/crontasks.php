@@ -39,7 +39,7 @@ class CronTasks extends CI_Controller {
                 foreach($courseJson->courses as $course){
                     if($course->start_year){
                         $courseJson->start_date = $course->start_year."-".str_pad($course->start_month,2,'0', STR_PAD_LEFT)."-".str_pad($course->start_day,2,'0', STR_PAD_LEFT);
-                        $courseJson->course_length = $course->duration_string;
+                        $courseJson->course_length = explode(" ",$course->duration_string)[0];
                         $courseJson->site = $course->home_link;
                         $id = $this->course_data->insertRow($courseJson);
 
