@@ -37,7 +37,7 @@ class CronTasks extends CI_Controller {
 
 
                 foreach($courseJson->courses as $course){
-                    if($course->start_year){
+                    if($course->start_year && $course->duration_string != ""){
                         $courseJson->start_date = $course->start_year."-".str_pad($course->start_month,2,'0', STR_PAD_LEFT)."-".str_pad($course->start_day,2,'0', STR_PAD_LEFT);
                         $arr = explode(" ",$course->duration_string);
                         $courseJson->course_length = $arr[0];
@@ -52,9 +52,10 @@ class CronTasks extends CI_Controller {
                     }
                 }
 
-                echo "done";
             }
         }
+
+        echo "done";
     }
 
 }
