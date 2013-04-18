@@ -27,7 +27,7 @@ class CronTasks extends CI_Controller {
                     }
                 }
 
-                $courseJson->category = $catStr;
+                $courseJson->category = substr($catStr,0,99);
 
                 if($courseJson->video == ""){
                     $courseJson->video_link = "";
