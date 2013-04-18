@@ -11,9 +11,7 @@ class CronTasks extends CI_Controller {
         $this->course_data->emptyTable();
         $this->courseDetails->emptyTable();
 
-        echo " done!";
-
-
+        echo " done!<br/>";
         echo "scraping coursera....";
 
         $urls = (object) array("coursesJson" => "https://d1hpa2gdx2lr6r.cloudfront.net/maestro/api/topic/list2");
