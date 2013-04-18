@@ -5,6 +5,15 @@ class CronTasks extends CI_Controller {
 
         $this->load->model("course_data");
         $this->load->model("courseDetails");
+
+        echo "emptying the tables....";
+
+        $this->course_data->emptyTable();
+        $this->courseDetails->emptyTable();
+
+        echo " done!";
+
+
         echo "scraping coursera....";
 
         $urls = (object) array("coursesJson" => "https://d1hpa2gdx2lr6r.cloudfront.net/maestro/api/topic/list2");
@@ -55,7 +64,7 @@ class CronTasks extends CI_Controller {
             }
         }
 
-        echo "done";
+        echo " done!";
     }
 
 }

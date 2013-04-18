@@ -15,4 +15,8 @@ class courseDetails extends CI_Model {
 
     }
 
+    function emptyTable(){
+        $this->db->empty_table('courseDetails');
+    }
+
 }

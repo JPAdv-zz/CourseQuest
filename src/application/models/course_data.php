@@ -22,4 +22,8 @@ class course_data extends CI_Model {
 
     }
 
+    function emptyTable(){
+        $this->db->empty_table('course_data');
+    }
+
 }
