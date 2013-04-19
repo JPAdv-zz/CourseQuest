@@ -6,7 +6,7 @@
 table {
     width : auto;
     margin-bottom: 10px;
-    color: #333333;
+    color: #505050;
     border: 1px solid gray;
     border-radius: 1px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -60,10 +60,11 @@ th {
     text-align: center;
     margin-top: 2px;
     padding-left: 0px;
-    color:white;
-    background: #515B66;
+    color:#545454;
+    background: #F0F0F0;
     border-top: 1px solid rgba(250,250,250,0.7);
     border-bottom: 1px solid white;
+    text-shadow: 0 1px 1px rgba(250,250,250, .85);
     /*border-right: 0px solid #515B66;*/
 }
 
