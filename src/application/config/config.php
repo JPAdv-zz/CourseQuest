@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/Coursequest/src/';
+$config['base_url']	= 'http://localhost/~Yunny/Coursequest/src/';
 
 /*
 |--------------------------------------------------------------------------

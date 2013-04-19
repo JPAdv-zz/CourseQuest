@@ -1,7 +1,15 @@
 <?php
 function filterRecord($s){
     if(strpos($s, "http") !== false){
-        return "<img src='".$s."'>";
+    	
+    	if (strpos($s, "large-icon.png") !== false) {
+        	$imageID = "course-image";
+    	}
+    	else {
+    		$imageID = "professor-image";
+    	}
+    	return "<img id='".$imageID."' src='".$s."'>";
+
     }else{
         return $s;
     }

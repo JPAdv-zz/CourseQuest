@@ -6,6 +6,8 @@ class content_table extends CI_Controller{
         $this->load->library('table');
         $this->load->helper('url');
 
+        $this->table->set_heading(array('', 'Course Name', 'Category', 'Start Date', 'Course Length', 'Professor', ''));
+
         $config["base_url"] = base_url()."index.php/content_table/index";
         $config["total_rows"] = $this->db->get("course_data")->num_rows();
         $config["per_page"] = 10;
