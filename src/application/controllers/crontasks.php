@@ -1,4 +1,5 @@
 <?php
+//Add some comments man... 
 class CronTasks extends CI_Controller {
 
     function scrape_coursera(){
