@@ -1,0 +1,6 @@
+How to build and get yourself setup?!
+-------------------------------------
+
+CourseQuest is a MOOCS site that enables users to properly find
+online courses. To get yourself ready and set to go, you must read
+the following.
