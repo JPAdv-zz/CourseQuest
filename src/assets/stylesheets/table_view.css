@@ -1,0 +1,104 @@
+#tablecontainer{
+    width: 1200px;
+    margin : auto;
+}
+
+table {
+    width : auto;
+    margin-bottom: 10px;
+    color: #333333;
+    border: 1px solid gray;
+    border-radius: 1px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+#tablecontainer tr:first-child:hover {
+    background-color: #ededed;
+    color: black;
+    z-index: 10px;
+}
+
+#tablecontainer tr:nth-child(odd) {
+    background-color: #f9f9f9;
+    z-index: 10px;
+}
+
+#tablecontainer tr:nth-child(odd):hover {
+    background-color: #53A0ED;
+    border-right-color: #53A0ED;
+    color: white;
+    z-index: 10px;
+}
+
+#tablecontainer tr:nth-child(even) {
+    background-color: #fefefe;
+    z-index: 10px;
+}
+
+#tablecontainer tr:nth-child(even):hover {
+    background-color: #53A0ED;
+    border-left-color:#53A0ED;
+    color: white;
+    z-index: 10px;
+}
+
+td:not(first-child) {
+    border-right: 1px solid #efefef;
+    padding: 5px;
+}
+
+td:not(first-child):hover {
+    border-right: 1px solid #53A0ED;
+    padding: 5px;
+}
+
+td:last-child{
+    border-right: none;
+}
+
+th {
+    text-align: center;
+    margin-top: 2px;
+    padding-left: 0px;
+    color:white;
+    background: #515B66;
+    border-top: 1px solid rgba(250,250,250,0.7);
+    border-bottom: 1px solid white;
+    /*border-right: 0px solid #515B66;*/
+}
+
+table tbody tr td img#professor-image {
+    height: 80px;
+    width: 80px;
+    border-radius: 4px;
+}
+
+table tbody tr td img#course-image {
+    height: 80px;
+    width: 190px;
+    border-radius: 4px;
+}
+
+.pagination {
+    width:10px;
+    height:40px;
+    position: relative;
+    left: 35%;
+}
+
+.pagination a,.pagination strong{
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 3px;
+    background: #efefef;
+    padding:3px;
+    color: #333;
+}
+
+.pagination a:hover{
+    background: #DDD;
+}
+
+.pagination strong{
+    cursor: default;
+}

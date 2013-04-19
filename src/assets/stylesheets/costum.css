@@ -1,0 +1,8 @@
+html {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+	background-image: url('../images/BackPattern.png');
+    background-color: white;
+}

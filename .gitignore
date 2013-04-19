@@ -3,4 +3,4 @@
 # 		http://help.github.com/ignore-files/
 #
 # Do NOT delete this file.
-/src/config/*
+/src/application/config/*
