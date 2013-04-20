@@ -22,9 +22,8 @@ function filterRecord($s){
             $imageID = "professor-image";
             return "<img id='".$imageID."' src='".$s."'>";
         }
-        if(strpos($s, "image.jpg") !== false) {
-            $imageID = "course-image";
-            return "<img id='".$imageID."' src='".$s."'>";
+        if(strpos($s, "canvas.net/courses") !== false) {
+            return "<a id='class-link' href='".$s."'>Canvas</a>";;
         }
 
     }else{
