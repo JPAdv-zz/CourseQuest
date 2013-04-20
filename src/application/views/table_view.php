@@ -6,12 +6,25 @@ function filterRecord($s){
         	$imageID = "course-image";
             return "<img id='".$imageID."' src='".$s."'>";
     	}
-    	else if(strpos($s, "coursera-instructor") !== false){
+    	if(strpos($s, "coursera-instructor") !== false){
     		$imageID = "professor-image";
             return "<img id='".$imageID."' src='".$s."'>";
     	}
-        else if(strpos($s, "class.coursera.org") !== false){
+        if(strpos($s, "class.coursera.org") !== false){
             return "<a id='class-link' href='".$s."'>Coursera</a>";
+        }
+        
+        if(strpos($s, "image.jpg") !== false) {
+            $imageID = "course-image";
+            return "<img id='".$imageID."' src='".$s."'>";
+        }
+        if(strpos($s, "avatar.jpg") !== false) {
+            $imageID = "professor-image";
+            return "<img id='".$imageID."' src='".$s."'>";
+        }
+        if(strpos($s, "image.jpg") !== false) {
+            $imageID = "course-image";
+            return "<img id='".$imageID."' src='".$s."'>";
         }
 
     }else{
