@@ -3,6 +3,7 @@ function filterRecord($s){
     if(strpos($s, "http") !== false){
     	
     	if (strpos($s, "large-icon.png") !== false) {
+<<<<<<< HEAD
         	$imageID = "course-image";
             return "<img id='".$imageID."' src='".$s."'>";
     	}
@@ -25,6 +26,14 @@ function filterRecord($s){
         if(strpos($s, "canvas.net/courses") !== false) {
             return "<a id='class-link' href='".$s."'>Canvas</a>";;
         }
+=======
+        	$imageClass = "course-image";
+    	}
+    	else {
+    		$imageClass = "professor-image";
+    	}
+    	return "<img class='an-tr-op ".$imageClass."' onload='this.style.opacity = 1;' src='".$s."'>";
+>>>>>>> develop
 
     }else{
         return $s;

@@ -89,16 +89,18 @@ th {
     /*border-right: 0px solid #515B66;*/
 }
 
-table tbody tr td img#professor-image {
+table tbody tr td img.professor-image {
     height: 80px;
     width: 80px;
     border-radius: 4px;
+    opacity: 0;
 }
 
-table tbody tr td img#course-image {
+table tbody tr td img.course-image {
     height: 80px;
     width: 190px;
     border-radius: 4px;
+    opacity: 0;
 }
 
 .pagination {
