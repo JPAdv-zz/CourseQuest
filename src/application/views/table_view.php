@@ -11,7 +11,7 @@ function filterRecord($s){
             return "<img id='".$imageID."' src='".$s."'>";
     	}
         else if(strpos($s, "class.coursera.org") !== false){
-            return "<a href='".$s."'>Coursera</a>";
+            return "<a id='class-link' href='".$s."'>Coursera</a>";
         }
 
     }else{
