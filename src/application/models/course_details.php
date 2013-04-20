@@ -1,6 +1,6 @@
 <?php
 
-class courseDetails extends CI_Model {
+class course_details extends CI_Model {
 
     function insertRow($o){
 
@@ -10,13 +10,13 @@ class courseDetails extends CI_Model {
             "profimage" => $o->photo
         );
 
-        $this->db->insert('courseDetails',$data);
+        $this->db->insert('coursedetails',$data);
         return $this->db->insert_id();
 
     }
 
     function emptyTable(){
-        $this->db->empty_table('courseDetails');
+        $this->db->empty_table('coursedetails');
     }
 
 }

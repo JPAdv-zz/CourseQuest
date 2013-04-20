@@ -3,12 +3,12 @@ function filterRecord($s){
     if(strpos($s, "http") !== false){
     	
     	if (strpos($s, "large-icon.png") !== false) {
-        	$imageID = "course-image";
+        	$imageClass = "course-image";
     	}
     	else {
-    		$imageID = "professor-image";
+    		$imageClass = "professor-image";
     	}
-    	return "<img id='".$imageID."' src='".$s."'>";
+    	return "<img class='an-tr-op ".$imageClass."' onload='this.style.opacity = 1;' src='".$s."'>";
 
     }else{
         return $s;
