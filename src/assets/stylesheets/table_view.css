@@ -23,24 +23,16 @@ table {
     z-index: 10px;
 }
 
-#tablecontainer tr:nth-child(odd):hover {
-    background-color: #53A0ED;
-    border-right-color: #53A0ED;
-    border-left-color: #53A0ED;
+#tablecontainer tr:nth-child(n):hover {
+    background-color: #B89AFE;
+    border-right-color: #B89AFE;
+    border-left-color: #B89AFE;
     color: white;
     z-index: 10px;
 }
 
 #tablecontainer tr:nth-child(even) {
     background-color: #fefefe;
-    z-index: 10px;
-}
-
-#tablecontainer tr:nth-child(even):hover {
-    background-color: #53A0ED;
-    border-left-color:#53A0ED;
-    border-right-color: #53A0ED;
-    color: white;
     z-index: 10px;
 }
 
@@ -102,25 +94,28 @@ table tbody tr td img.course-image {
     border-radius: 4px;
     opacity: 0;
 }
-
+td:nth-child(5){
+	text-align:center;
+}
 .pagination {
     width:10px;
     height:40px;
     position: relative;
     left: 35%;
+
 }
 
 .pagination a,.pagination strong{
     cursor: pointer;
     text-decoration: none;
     margin-left: 3px;
-    background: #efefef;
+    background: transparent;
     padding:3px;
     color: #333;
 }
 
 .pagination a:hover{
-    background: #DDD;
+    text-decoration: underline;
 }
 
 .pagination strong{
