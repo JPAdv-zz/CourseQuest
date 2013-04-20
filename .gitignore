@@ -3,5 +3,5 @@
 # 		http://help.github.com/ignore-files/
 #
 # Do NOT delete this file.
-#/src/application/config/*
-/src/application/.DS_Store
+/src/application/config/*
+*.DS_Store

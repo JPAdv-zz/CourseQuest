@@ -6,7 +6,7 @@ class content_table extends CI_Controller{
         $this->load->library('table');
         $this->load->helper('url');
 
-        $this->table->set_heading(array('', 'Course Name', 'Category', 'Start Date', 'Course Length', 'Professor', ''));
+        $this->table->set_heading(array('', 'Course Name', 'Category', 'Start Date', 'Course Length', 'Professor', '', 'Site'));
 
         $config["base_url"] = base_url()."index.php/content_table/index";
         $config["total_rows"] = $this->db->get("course_data")->num_rows();
@@ -25,7 +25,7 @@ class content_table extends CI_Controller{
             $seg = 0;
         }
 
-        $rec = $this->db->query("SELECT course_image,title,category,start_date,course_length,profname,profimage FROM course_data,coursedetails where coursedetails.id  = course_data.id LIMIT ".$seg.",".$config["per_page"]);
+        $rec = $this->db->query("SELECT course_image,title,category,start_date,course_length,profname,profimage,site FROM course_data,coursedetails where coursedetails.id  = course_data.id LIMIT ".$seg.",".$config["per_page"]);
 
         $data["records"] = $rec;
         $data["main_content"] = "table_view";

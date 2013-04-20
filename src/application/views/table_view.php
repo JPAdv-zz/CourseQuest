@@ -4,11 +4,15 @@ function filterRecord($s){
     	
     	if (strpos($s, "large-icon.png") !== false) {
         	$imageID = "course-image";
+            return "<img id='".$imageID."' src='".$s."'>";
     	}
-    	else {
+    	else if(strpos($s, "coursera-instructor") !== false){
     		$imageID = "professor-image";
+            return "<img id='".$imageID."' src='".$s."'>";
     	}
-    	return "<img id='".$imageID."' src='".$s."'>";
+        else if(strpos($s, "class.coursera.org") !== false){
+            return "<a href='".$s."'>Coursera</a>";
+        }
 
     }else{
         return $s;

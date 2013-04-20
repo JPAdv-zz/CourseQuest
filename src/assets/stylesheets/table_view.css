@@ -26,6 +26,7 @@ table {
 #tablecontainer tr:nth-child(odd):hover {
     background-color: #53A0ED;
     border-right-color: #53A0ED;
+    border-left-color: #53A0ED;
     color: white;
     z-index: 10px;
 }
@@ -38,17 +39,19 @@ table {
 #tablecontainer tr:nth-child(even):hover {
     background-color: #53A0ED;
     border-left-color:#53A0ED;
+    border-right-color: #53A0ED;
     color: white;
     z-index: 10px;
 }
 
 td:not(first-child) {
-    border-right: 1px solid #efefef;
+    border-right: 0px solid #efefef;
     padding: 5px;
 }
 
 td:not(first-child):hover {
     border-right: 1px solid #53A0ED;
+    border-left: 1px solid #53A0ED;
     padding: 5px;
 }
 
