@@ -1,40 +1,24 @@
 <?php
+/*
+ This is a function that filters the string returned by the table.
+*/
 function filterRecord($s){
-    if(strpos($s, "http") !== false){
-    	
-    	if (strpos($s, "large-icon.png") !== false) {
-/**<<<<<<< HEAD
-        	$imageID = "course-image";
-            return "<img id='".$imageID."' src='".$s."'>";
-    	}
-    	if(strpos($s, "coursera-instructor") !== false){
-    		$imageID = "professor-image";
-            return "<img id='".$imageID."' src='".$s."'>";
-    	}
+    // Check that the string contains the characters http.
+    if(strpos($s, "http") !== false) {
+        // Check if the string is from coursera. If so, set it to return the string "Coursera" only.
         if(strpos($s, "class.coursera.org") !== false){
-            return "<a id='class-link' href='".$s."'>Coursera</a>";
+            return $s="Coursera";
         }
-        
-        if(strpos($s, "image.jpg") !== false) {
-            $imageID = "course-image";
-            return "<img id='".$imageID."' src='".$s."'>";
-        }
-        if(strpos($s, "avatar.jpg") !== false) {
-            $imageID = "professor-image";
-            return "<img id='".$imageID."' src='".$s."'>";
-        }
-        if(strpos($s, "canvas.net/courses") !== false) {
-            return "<a id='class-link' href='".$s."'>Canvas</a>";;
-        }
-=======*/
+    	// Check
+    	if (strpos($s, "large-icon.png") !== false) {
         	$imageClass = "course-image";
     	}
     	else {
     		$imageClass = "professor-image";
     	}
     	return "<img class='an-tr-op ".$imageClass."' onload='this.style.opacity = 1;' src='".$s."'>";
-
-    }else{
+    }
+    else{
         return $s;
     }
 }
