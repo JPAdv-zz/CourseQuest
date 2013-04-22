@@ -1,20 +1,31 @@
 <?php
+/*
+ This is a function that filters the string returned by the table.
+*/
 function filterRecord($s){
-    if(strpos($s, "http") !== false){
+
+    // Check that the string is only a number.
+    // Length of class.
+    if(is_numeric($s)) {
+        return $s." weeks";
+    }
+
+    // Check that the string contains the characters http.
+    if(strpos($s, "http") !== false) {
+        // Check if the string is from coursera. If so, set it to return the string "Coursera" only.
+        if(strpos($s, "class.coursera.org") !== false){
+            return $s="Coursera";
+        }
     	
     	if (strpos($s, "large-icon.png") !== false) {
-        	$imageID = "course-image";
-            return "<img id='".$imageID."' src='".$s."'>";
+        	$imageClass = "course-image";
     	}
-    	else if(strpos($s, "coursera-instructor") !== false){
-    		$imageID = "professor-image";
-            return "<img id='".$imageID."' src='".$s."'>";
+    	else {
+    		$imageClass = "professor-image";
     	}
-        else if(strpos($s, "class.coursera.org") !== false){
-            return "<a id='class-link' href='".$s."'>Coursera</a>";
-        }
-
-    }else{
+    	return "<img class='an-tr-op ".$imageClass."' onload='this.style.opacity = 1;' src='".$s."'>";
+    }
+    else{
         return $s;
     }
 }

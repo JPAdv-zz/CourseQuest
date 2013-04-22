@@ -25,7 +25,7 @@ class content_table extends CI_Controller{
             $seg = 0;
         }
 
-        $rec = $this->db->query("SELECT course_image,title,category,start_date,course_length,profname,profimage,site FROM course_data,coursedetails where coursedetails.id  = course_data.id LIMIT ".$seg.",".$config["per_page"]);
+        $rec = $this->db->query("SELECT course_image,title,category,start_date,course_length,profname,profimage,site FROM course_data,coursedetails where coursedetails.id  = course_data.id GROUP BY course_data.id LIMIT ".$seg.",".$config["per_page"]);
 
         $data["records"] = $rec;
         $data["main_content"] = "table_view";

@@ -23,24 +23,16 @@ table {
     z-index: 10px;
 }
 
-#tablecontainer tr:nth-child(odd):hover {
-    background-color: #53A0ED;
-    border-right-color: #53A0ED;
-    border-left-color: #53A0ED;
-    color: white;
+#tablecontainer tr:nth-child(n):hover {
+    background-color: #B89AFE;
+    border-right-color: #B89AFE;
+    border-left-color: #B89AFE;
+    color: #5A4D78;
     z-index: 10px;
 }
 
 #tablecontainer tr:nth-child(even) {
     background-color: #fefefe;
-    z-index: 10px;
-}
-
-#tablecontainer tr:nth-child(even):hover {
-    background-color: #53A0ED;
-    border-left-color:#53A0ED;
-    border-right-color: #53A0ED;
-    color: white;
     z-index: 10px;
 }
 
@@ -82,43 +74,48 @@ th {
     margin-top: 2px;
     padding-left: 0px;
     color:#545454;
-    background: #F0F0F0;
+    background: #e0e0e0;
     border-top: 1px solid rgba(250,250,250,0.7);
     border-bottom: 1px solid #a0a0a0;
     text-shadow: 0 1px 1px rgba(250,250,250, .85);
     /*border-right: 0px solid #515B66;*/
 }
 
-table tbody tr td img#professor-image {
+table tbody tr td img.professor-image {
     height: 80px;
     width: 80px;
     border-radius: 4px;
+    opacity: 0;
 }
 
-table tbody tr td img#course-image {
+table tbody tr td img.course-image {
     height: 80px;
     width: 160px;
     border-radius: 4px;
+    opacity: 0;
 }
-
+td:nth-child(5){
+	text-align:center;
+}
 .pagination {
     width:10px;
     height:40px;
     position: relative;
     left: 35%;
+
 }
 
 .pagination a,.pagination strong{
     cursor: pointer;
     text-decoration: none;
     margin-left: 3px;
-    background: #efefef;
+    background: transparent;
     padding:3px;
     color: #333;
 }
 
 .pagination a:hover{
-    background: #DDD;
+    text-decoration: underline;
 }
 
 .pagination strong{
