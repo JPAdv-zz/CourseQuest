@@ -141,4 +141,8 @@ td:nth-child(5){
 #coursequest_player,#vimeoPlayer{
     margin: 10% auto;
     display: inline-block;
+    padding : 15px;
+    background: #333;
+    background: rgba(0,0,0,.5);
+    border : 1px solid black;
 }
