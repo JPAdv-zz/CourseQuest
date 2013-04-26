@@ -147,3 +147,16 @@ td:nth-child(5){
     border : 1px solid black;
     box-shadow: 0 0 25px black;
 }
+
+.play-button-container{
+    height: 0;
+}
+.play-button{
+    background-image: url('../images/playbutton.png');
+    height: 34px;
+    width: 34px;
+    z-index: 1;
+    position: relative;
+    top: 25px;
+    left: 77px;
+}
