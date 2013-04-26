@@ -25,18 +25,19 @@ class content_table extends CI_Controller{
             $seg = 0;
         }
 
-        $recxx = $this->db->query("SELECT course_image,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where coursedetails.id  = course_data.id GROUP BY course_data.id LIMIT ".$seg.",".$config["per_page"]);
+        $recxx = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where coursedetails.id  = course_data.id GROUP BY course_data.id LIMIT ".$seg.",".$config["per_page"]);
         $rec = $recxx->result_array();
         $rs = array();
         foreach($rec as $r){
             $r["course_image"] = "<img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 1;'>";
             $r["profimage"] = "<img class='an-tr-op professor-image' onload='this.style.opacity = 1;' src='".$r["profimage"]."' style='opacity: 1;'>";
-            $r["title"] = "<a href='".$r["course_length"]."'>".$r["title"]."</a>";
+            $r["title"] = "<a href='".$r["course_link"]."'>".$r["title"]."</a>";
 
             if(strpos($r["site"],"class.coursera.org") > 0){
                 $r["site"] = "Coursera";
             }
             unset($r["video_link"]);
+            unset($r["course_link"]);
             $rs[] = $r;
 
 
