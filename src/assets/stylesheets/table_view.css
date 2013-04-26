@@ -159,4 +159,5 @@ td:nth-child(5){
     position: relative;
     top: 25px;
     left: 77px;
+    cursor: pointer;
 }

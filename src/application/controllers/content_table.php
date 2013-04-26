@@ -29,7 +29,7 @@ class content_table extends CI_Controller{
         $rec = $recxx->result_array();
         $rs = array();
         foreach($rec as $r){
-            $r["course_image"] = "<div class='play-button-container'><div class='play-button'></div></div><img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 1;'>";
+            $r["course_image"] = "<div class='play-button-container'><div onclick='loadPreviewVideo(\"".$r["video_link"]."\")' class='play-button'></div></div><img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 1;'>";
             $r["profimage"] = "<img class='an-tr-op professor-image' onload='this.style.opacity = 1;' src='".$r["profimage"]."' style='opacity: 1;'>";
             $r["title"] = "<a href='".$r["course_link"]."'>".$r["title"]."</a>";
 
