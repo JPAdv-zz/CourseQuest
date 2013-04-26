@@ -93,6 +93,7 @@ table tbody tr td img.course-image {
     width: 190px;
     border-radius: 4px;
     opacity: 0;
+    cursor: pointer;
 }
 td:nth-child(5){
 	text-align:center;
@@ -120,4 +121,24 @@ td:nth-child(5){
 
 .pagination strong{
     cursor: default;
+}
+
+#coursequest_player_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin : 0;
+    padding: 0;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    background: black;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    display: none;
+}
+
+#coursequest_player,#vimeoPlayer{
+    margin: 10% auto;
+    display: inline-block;
 }

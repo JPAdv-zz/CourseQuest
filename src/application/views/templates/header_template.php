@@ -10,7 +10,13 @@
                     -o-transition : opacity 1s;
                     -moz-transition : opacity 1s;
                 }
+
+                body,html{
+                    margin 0;
+                    padding 0;
+                }
             </style>
+            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
             <link rel="stylesheet" href="<?php echo base_url(); ?>assets/stylesheets/costum.css" type="text/css" media="screen" charset="utf-8"/>
             <link rel="stylesheet" href="<?php echo base_url(); ?>assets/stylesheets/table_view.css" type="text/css" media="screen" charset="utf-8"/>
             <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
