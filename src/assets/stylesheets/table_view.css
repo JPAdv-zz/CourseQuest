@@ -138,7 +138,7 @@ td:nth-child(5){
     display: none;
 }
 
-#coursequest_player{
+#coursequest_player,#vimeoPlayer{
     margin: 10% auto;
     display: inline-block;
 }

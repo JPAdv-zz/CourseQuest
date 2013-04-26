@@ -80,20 +80,34 @@ function filterRecord($s){
             $("#coursequest_player_container").click(function() {
                 stopVideo();
                 $(this).fadeOut('slow');
+                $("#vimeoPlayer").empty();
             });
         });
 
         loadPreviewVideo = function(url){
-            var len = url.length;
-            var id = url.substring(url.indexOf("v=")+2,len);
-            player.loadVideoById(id);
-            $("#coursequest_player_container").fadeIn('slow');
+            if(url.indexOf("v=") > 0){
+                $("#vimeoPlayer").toggle(false);
+                $("#coursequest_player").toggle(true);
+                var len = url.length;
+                var id = url.substring(url.indexOf("v=")+2,len);
+                player.loadVideoById(id);
+                $("#coursequest_player_container").fadeIn('slow');
+            }else{
+                $("#coursequest_player").toggle(false);
+                $("#vimeoPlayer").toggle(true);
+                $("#vimeoPlayer")[0].innerHTML = "<iframe src='"+url+"' width='640' height='390' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen/>";
+                $("#coursequest_player_container").fadeIn('slow');
+            }
+
         };
     </script>
 
     <div id="coursequest_player_container">
+<div id="vimeoPlayer"></div>
         <div id="coursequest_player"></div>
     </div>
+
+
 
 <div id="tablecontainer">
 <?php
