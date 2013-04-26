@@ -31,7 +31,7 @@ class content_table extends CI_Controller{
         foreach($rec as $r){
             $r["course_image"] = "<img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 1;'>";
             $r["profimage"] = "<img class='an-tr-op professor-image' onload='this.style.opacity = 1;' src='".$r["profimage"]."' style='opacity: 1;'>";
-            $r["title"] = "<a href='".$r["site"]."'>".$r["title"]."</a>";
+            $r["title"] = "<a href='".$r["course_length"]."'>".$r["title"]."</a>";
 
             if(strpos($r["site"],"class.coursera.org") > 0){
                 $r["site"] = "Coursera";
