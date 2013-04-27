@@ -1,16 +1,20 @@
 <?php
 //Add some comments man... 
-class CronTasks extends CI_Controller {
+class crontasks extends CI_Controller {
+
+    function index(){
+        echo "works";
+    }
 
     function scrape_coursera(){
 
         $this->load->model("course_data");
-        $this->load->model("courseDetails");
+        $this->load->model("course_details");
 
         echo "emptying the tables....";
 
         $this->course_data->emptyTable();
-        $this->courseDetails->emptyTable();
+        $this->course_details->emptyTable();
 
         echo " done!<br/>";
         echo "scraping coursera....";
@@ -54,7 +58,7 @@ class CronTasks extends CI_Controller {
 
                         foreach($instructorJson as $instructor){
                             $instructor->id = $id;
-                            $this->courseDetails->insertRow($instructor);
+                            $this->course_details->insertRow($instructor);
                         }
 
                     }

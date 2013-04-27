@@ -1,3 +1,8 @@
+/*
+  This is the Table css. If you would like to make any changes, that's fine.
+  But try not to make any additions that can damage other parts of the site.
+*/
+
 #tablecontainer{
     width: 1200px;
     margin : auto;
@@ -6,7 +11,7 @@
 table {
     width : auto;
     margin-bottom: 10px;
-    color: #333333;
+    color: #505050;
     border: 1px solid gray;
     border-radius: 1px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -18,15 +23,17 @@ table {
     z-index: 10px;
 }
 
+
 #tablecontainer tr:nth-child(odd) {
     background-color: #f9f9f9;
     z-index: 10px;
 }
 
-#tablecontainer tr:nth-child(odd):hover {
-    background-color: #53A0ED;
-    border-right-color: #53A0ED;
-    color: white;
+#tablecontainer tr:nth-child(n):hover {
+    background-color: #B89AFE;
+    border-right-color: #B89AFE;
+    border-left-color: #B89AFE;
+    color: #5A4D78;
     z-index: 10px;
 }
 
@@ -35,20 +42,30 @@ table {
     z-index: 10px;
 }
 
-#tablecontainer tr:nth-child(even):hover {
-    background-color: #53A0ED;
-    border-left-color:#53A0ED;
-    color: white;
-    z-index: 10px;
+#tablecontainer tr:not(first-child):hover a:visited{
+    color: #8B79B5;
+}
+
+td a {
+    text-decoration: none;
+    height: 100%;
+}
+
+td a:link {
+    color:#505050;
+}
+
+#tablecontainer tr td a:hover {
+    color:white;
+    display:block;
+}
+
+td a:visited {
+    color:#a0a0a0;
 }
 
 td:not(first-child) {
-    border-right: 1px solid #efefef;
-    padding: 5px;
-}
-
-td:not(first-child):hover {
-    border-right: 1px solid #53A0ED;
+    border-right: 0px solid #efefef;
     padding: 5px;
 }
 
@@ -60,45 +77,107 @@ th {
     text-align: center;
     margin-top: 2px;
     padding-left: 0px;
-    color:white;
-    background: #515B66;
+    color:#545454;
+    background: #e0e0e0;
     border-top: 1px solid rgba(250,250,250,0.7);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #a0a0a0;
+    text-shadow: 0 1px 1px rgba(250,250,250, .85);
     /*border-right: 0px solid #515B66;*/
 }
 
-table tbody tr td img#professor-image {
+th.header:hover {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+th.header:active {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.2), inset -1px 0px 5px rgba(0,0,0,0.2);
+}
+
+table tbody tr td img.professor-image {
     height: 80px;
     width: 80px;
     border-radius: 4px;
+    opacity: 0;
 }
 
-table tbody tr td img#course-image {
+table tbody tr td img.course-image {
     height: 80px;
-    width: 190px;
+    width: 160px;
     border-radius: 4px;
+    opacity: 0;
+    cursor: pointer;
 }
-
+td:nth-child(5){
+	text-align:center;
+}
 .pagination {
     width:10px;
     height:40px;
     position: relative;
     left: 35%;
+
 }
 
 .pagination a,.pagination strong{
     cursor: pointer;
     text-decoration: none;
     margin-left: 3px;
-    background: #efefef;
+    background: transparent;
     padding:3px;
     color: #333;
 }
 
 .pagination a:hover{
-    background: #DDD;
+    text-decoration: underline;
 }
 
 .pagination strong{
     cursor: default;
+}
+
+#coursequest_player_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin : 0;
+    padding: 0;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    background: black;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    display: none;
+}
+
+#coursequest_player,#vimeoPlayer{
+    margin: 10% auto;
+    display: inline-block;
+    padding : 15px;
+    background: #555;
+    background: rgba(0,0,0,.70);
+    border : 1px solid black;
+    box-shadow: 0 1px 25px black;
+}
+
+.play-button-container{
+    height: 0;
+    opacity: 0;
+}
+
+.play-button{
+    background-image: url('../images/playbutton.png');
+    height: 34px;
+    width: 34px;
+    z-index: 1;
+    position: relative;
+    top: 25px;
+    left: 77px;
+    cursor: pointer;
 }
