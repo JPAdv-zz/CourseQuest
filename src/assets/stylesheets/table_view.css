@@ -21,15 +21,8 @@ table {
     background-color: #ededed;
     color: black;
     z-index: 10px;
-    cursor: pointer;
 }
 
-#tablecontainer.header {
-    background-color: #dddddd;
-    color: black;
-    z-index: 10px;
-    cursor: pointer;
-}
 
 #tablecontainer tr:nth-child(odd) {
     background-color: #f9f9f9;
@@ -96,6 +89,7 @@ th.header:hover {
     background: #d0d0d0;
     color: #fdfdfd;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
 }
 
 th.header:active {
