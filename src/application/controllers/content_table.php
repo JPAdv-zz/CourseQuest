@@ -4,7 +4,6 @@ class content_table extends CI_Controller{
     function index(){
         $this->load->library('pagination');
         $this->load->library('table');
-        $this->load->helper('url');
 
         $this->table->set_heading(array('Image', 'Course Name', 'Category', 'Start Date', 'Course Length (Weeks)', 'Professor', 'Instructor Image', 'Site'));
 
@@ -29,8 +28,8 @@ class content_table extends CI_Controller{
         $rec = $recxx->result_array();
         $rs = array();
         foreach($rec as $r){
-            $r["course_image"] = "<div class='play-button-container'><div onclick='loadPreviewVideo(\"".$r["video_link"]."\")' class='play-button'></div></div><img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 1;'>";
-            $r["profimage"] = "<img class='an-tr-op professor-image' onload='this.style.opacity = 1;' src='".$r["profimage"]."' style='opacity: 1;'>";
+            $r["course_image"] = "<div class='an-tr-op play-button-container' onload='this.style.opacity = 1;' style='opacity: 1;'><div onclick='loadPreviewVideo(\"".$r["video_link"]."\")' class='play-button'/></div></div><img class='an-tr-op course-image' onclick='loadPreviewVideo(\"".$r["video_link"]."\")' onload='this.style.opacity = 1;' src='".$r["course_image"]."' style='opacity: 0;'/>";
+            $r["profimage"] = "<img class='an-tr-op professor-image' onload='this.style.opacity = 1;' src='".$r["profimage"]."' style='opacity: 0;'/>";
             $r["title"] = "<a href='".$r["course_link"]."'>".$r["title"]."</a>";
 
             if(strpos($r["site"],"class.coursera.org") > 0){
@@ -39,9 +38,6 @@ class content_table extends CI_Controller{
             unset($r["video_link"]);
             unset($r["course_link"]);
             $rs[] = $r;
-
-
-
         }
 
         $data["records"] = $rs;

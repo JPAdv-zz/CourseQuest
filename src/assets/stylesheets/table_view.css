@@ -36,6 +36,10 @@ table {
     z-index: 10px;
 }
 
+#tablecontainer tr:not(first-child):hover a:visited{
+    color: #8B79B5;
+}
+
 td a {
     text-decoration: none;
     height: 100%;
@@ -51,17 +55,11 @@ td a:link {
 }
 
 td a:visited {
-    color:#d0d0d0;
+    color:#a0a0a0;
 }
 
 td:not(first-child) {
     border-right: 0px solid #efefef;
-    padding: 5px;
-}
-
-td:not(first-child):hover {
-    border-right: 0px solid #53A0ED;
-    border-left: 0px solid #53A0ED;
     padding: 5px;
 }
 
@@ -142,15 +140,17 @@ td:nth-child(5){
     margin: 10% auto;
     display: inline-block;
     padding : 15px;
-    background: #333;
-    background: rgba(0,0,0,.5);
+    background: #555;
+    background: rgba(0,0,0,.70);
     border : 1px solid black;
-    box-shadow: 0 0 25px black;
+    box-shadow: 0 1px 25px black;
 }
 
 .play-button-container{
     height: 0;
+    opacity: 0;
 }
+
 .play-button{
     background-image: url('../images/playbutton.png');
     height: 34px;
