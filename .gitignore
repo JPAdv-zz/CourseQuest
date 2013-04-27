@@ -4,3 +4,4 @@
 #
 # Do NOT delete this file.
 /src/application/config/*
+*.DS_Store
