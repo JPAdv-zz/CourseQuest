@@ -1,3 +1,8 @@
+/*
+  This is the Table css. If you would like to make any changes, that's fine.
+  But try not to make any additions that can damage other parts of the site.
+*/
+
 #tablecontainer{
     width: 1200px;
     margin : auto;
@@ -16,6 +21,14 @@ table {
     background-color: #ededed;
     color: black;
     z-index: 10px;
+    cursor: pointer;
+}
+
+#tablecontainer.header {
+    background-color: #dddddd;
+    color: black;
+    z-index: 10px;
+    cursor: pointer;
 }
 
 #tablecontainer tr:nth-child(odd) {
@@ -77,6 +90,19 @@ th {
     border-bottom: 1px solid #a0a0a0;
     text-shadow: 0 1px 1px rgba(250,250,250, .85);
     /*border-right: 0px solid #515B66;*/
+}
+
+th.header:hover {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+th.header:active {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.2), inset -1px 0px 5px rgba(0,0,0,0.2);
 }
 
 table tbody tr td img.professor-image {
