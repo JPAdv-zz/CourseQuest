@@ -1,3 +1,8 @@
+/*
+  This is the Table css. If you would like to make any changes, that's fine.
+  But try not to make any additions that can damage other parts of the site.
+*/
+
 #tablecontainer{
     width: 1200px;
     margin : auto;
@@ -18,6 +23,7 @@ table {
     z-index: 10px;
 }
 
+
 #tablecontainer tr:nth-child(odd) {
     background-color: #f9f9f9;
     z-index: 10px;
@@ -27,13 +33,17 @@ table {
     background-color: #B89AFE;
     border-right-color: #B89AFE;
     border-left-color: #B89AFE;
-    color: white;
+    color: #5A4D78;
     z-index: 10px;
 }
 
 #tablecontainer tr:nth-child(even) {
     background-color: #fefefe;
     z-index: 10px;
+}
+
+#tablecontainer tr:not(first-child):hover a:visited{
+    color: #8B79B5;
 }
 
 td a {
@@ -51,17 +61,11 @@ td a:link {
 }
 
 td a:visited {
-    color:#d0d0d0;
+    color:#a0a0a0;
 }
 
 td:not(first-child) {
     border-right: 0px solid #efefef;
-    padding: 5px;
-}
-
-td:not(first-child):hover {
-    border-right: 0px solid #53A0ED;
-    border-left: 0px solid #53A0ED;
     padding: 5px;
 }
 
@@ -81,6 +85,20 @@ th {
     /*border-right: 0px solid #515B66;*/
 }
 
+th.header:hover {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+th.header:active {
+    background: #d0d0d0;
+    color: #fdfdfd;
+    text-shadow: 1px -1px 1px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.2), inset -1px 0px 5px rgba(0,0,0,0.2);
+}
+
 table tbody tr td img.professor-image {
     height: 80px;
     width: 80px;
@@ -90,7 +108,7 @@ table tbody tr td img.professor-image {
 
 table tbody tr td img.course-image {
     height: 80px;
-    width: 190px;
+    width: 160px;
     border-radius: 4px;
     opacity: 0;
     cursor: pointer;
@@ -142,15 +160,17 @@ td:nth-child(5){
     margin: 10% auto;
     display: inline-block;
     padding : 15px;
-    background: #333;
-    background: rgba(0,0,0,.5);
+    background: #555;
+    background: rgba(0,0,0,.70);
     border : 1px solid black;
-    box-shadow: 0 0 25px black;
+    box-shadow: 0 1px 25px black;
 }
 
 .play-button-container{
     height: 0;
+    opacity: 0;
 }
+
 .play-button{
     background-image: url('../images/playbutton.png');
     height: 34px;
