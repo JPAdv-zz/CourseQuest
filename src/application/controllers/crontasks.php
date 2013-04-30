@@ -38,7 +38,7 @@ class crontasks extends CI_Controller {
             $instructorJson = json_decode(file_get_contents("https://www.coursera.org/maestro/api/user/instructorprofile?exclude_topics=1&topic_short_name=".$topic->short_name));
 
             if(!$courseJson->social_link){
-                $courseJson->social_link = "https://www.coursera.org/";
+                $courseJson->social_link = "https://class.coursera.org/".$topic->short_name."/lecture/preview";
             }
 
             $catStr = "";
