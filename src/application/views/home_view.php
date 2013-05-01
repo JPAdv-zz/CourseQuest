@@ -1,10 +1,16 @@
 <script>
+    var searchtimer;
     $(document).ready(function(){
        $('#search_box').keyup(function(){
            var q = $(this).val();
-           $.get('<?php echo base_url(); ?>index.php/content_table/?q='+q,function(data){
-                $("#tablecontainer")[0].innerHTML = data;
-           });
+           if(searchtimer){
+               clearTimeout(searchtimer);
+           }
+           searchtimer = setTimeout(function(){
+               $.get('<?php echo base_url(); ?>index.php/content_table/?q='+q,function(data){
+                   $("#tablecontainer")[0].innerHTML = data;
+               });
+           },600);
        });
     });
 
