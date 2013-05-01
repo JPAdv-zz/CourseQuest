@@ -33,7 +33,7 @@ class api extends CI_Controller{
 
     function get_tags(){
 
-        $rec = $this->db->query("SELECT title FROM course_data,coursedetails where  coursedetails.id  = course_data.id GROUP BY course_data.id");
+        $rec = $this->db->query("SELECT title FROM course_data,coursedetails where  coursedetails.id  = course_data.id GROUP BY course_data.title");
 
         $res = $rec->result();
 
