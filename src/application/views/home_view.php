@@ -8,10 +8,13 @@
                 $( "#search_box" ).autocomplete({
                     source: data,
                     open: function(){
-                        $(this).autocomplete('widget').css('z-index', 104);
-                        $(this).autocomplete('widget').css('max-height', '218px');
-                        $(this).autocomplete('widget').css('overflow', 'hidden');
-                        $(this).autocomplete('widget').css('background', 'rgba(0,0,0,.8)');
+                        $(this).autocomplete('widget').css({'z-index': '104',
+                            'max-height' : '218px',
+                            'overflow' : 'hidden',
+                            'background' : 'rgba(0,0,0,.8)',
+                            'width': '356px',
+                            'border-radius' : '0px'
+                        });
                         return false;
                     },
                     select : search
