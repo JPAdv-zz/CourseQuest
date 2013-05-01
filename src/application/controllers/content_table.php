@@ -12,7 +12,7 @@ class content_table extends CI_Controller{
 
         $config["base_url"] = base_url()."index.php/content_table/index";
         $config["per_page"] = 10;
-        $config["num_links"] = 20;
+        $config["num_links"] = 15;
         $config["full_tag_open"] = "<div class='pagination'>";
         $config["full_tag_close"] = "</div>";
 
