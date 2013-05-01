@@ -1,7 +1,23 @@
 <script>
     var searchtimer;
     $(document).ready(function(){
-       if($('#search_box').val() !== ''){
+
+        $.getJSON(
+            '<?php echo base_url(); ?>index.php/api/get_tags/?callback=?',function(data){
+                $( "#search_box" ).autocomplete({
+                    source: data,
+                    open: function(){
+                        $(this).autocomplete('widget').css('z-index', 104);
+                        $(this).autocomplete('widget').css('max-height', '218px');
+                        $(this).autocomplete('widget').css('overflow', 'hidden');
+                        $(this).autocomplete('widget').css('background', 'rgba(0,0,0,.8)');
+                        return false;
+                    }
+                });
+            }
+        );
+
+        if($('#search_box').val() !== ''){
             search($('#search_box').val());
        }
 
@@ -35,7 +51,7 @@
 </script>
 
 
-<div id="coursequest_player_container" style="z-index: 104">
+<div id="coursequest_player_container" style="z-index: 105">
     <div id="vimeoPlayer"></div>
     <div id="coursequest_player"></div>
 </div>
