@@ -13,7 +13,8 @@
                         $(this).autocomplete('widget').css('overflow', 'hidden');
                         $(this).autocomplete('widget').css('background', 'rgba(0,0,0,.8)');
                         return false;
-                    }
+                    },
+                    select : speechSearch
                 });
             }
         );
