@@ -8,6 +8,10 @@
     background: rgba(0,0,0,.5);
     border-bottom: 1px solid black;
     z-index: 103;
+    box-shadow: 0 0 25px gray;
+    -webkit-box-shadow: 0 0 25px gray;
+    -moz-box-shadow: 0 0 25px gray;
+    -o-box-shadow: 0 0 25px gray;
 }
 #search_padding{
     display: inline-block;

@@ -190,3 +190,7 @@ td:nth-child(5){
     left: 77px;
     cursor: pointer;
 }
+
+#coursequest_player_container iframe{
+    background: black;
+}
