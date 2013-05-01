@@ -13,7 +13,8 @@
                             'overflow' : 'hidden',
                             'background' : 'rgba(0,0,0,.8)',
                             'width': '356px',
-                            'border-radius' : '0px'
+                            'border-radius' : '0px',
+                            'font-size' : '14px'
                         });
                         return false;
                     },
