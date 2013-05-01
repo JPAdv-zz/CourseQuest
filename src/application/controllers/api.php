@@ -44,6 +44,13 @@ class api extends CI_Controller{
             $rr[] = trim($r->title);
         }
 
+        $rec = $this->db->query("SELECT category FROM course_data,coursedetails where  coursedetails.id  = course_data.id GROUP BY course_data.category");
+
+        $res = $rec->result();
+        foreach($res as $r){
+            $rr[] = trim($r->category);
+        }
+
         $this->output
             ->set_content_type('application/json')
             ->set_output($callback."(".json_encode($rr).");");

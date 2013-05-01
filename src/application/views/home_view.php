@@ -14,65 +14,48 @@
                         $(this).autocomplete('widget').css('background', 'rgba(0,0,0,.8)');
                         return false;
                     },
-                    select : speechSearch
+                    select : search
                 });
             }
         );
 
         if($('#search_box').val() !== ''){
-            search($('#search_box').val());
-       }
+            search();
+        }
 
-       $('#search_box').keyup(function(){
-           var q = $(this).val();
-           if(q === currentSearch){
-               return;
-           }
-           $('#loading_logo').css('visibility','visible');
-           if(searchtimer){
-               clearTimeout(searchtimer);
-           }
-           searchtimer = setTimeout(function(){
-                search(q);
-           },600);
-       });
+       $('#search_box').change(search);
+       $('#search_box').keyup(search);
     });
 
-    function search(q){
-
-        if(q === currentSearch){
-            $('#loading_logo').css('visibility','hidden');
-            return;
-        }
-
-        if(q === ''){
-            currentSearch = q;
-            $("#tablecontainer")[0].innerHTML = '';
-            $('#loading_logo').css('visibility','hidden');
-            return;
-        }
-
-        $.get('<?php echo base_url(); ?>index.php/content_table/?q='+q,function(data){
-            currentSearch = q;
-            $("#tablecontainer")[0].innerHTML = data;
-            $('#loading_logo').css('visibility','hidden');
-        });
-    }
-
-    function speechSearch(){
-        var q = $('#search_box').val();
-        if(q === currentSearch){
-            return;
-        }
+    function search(){
         $('#loading_logo').css('visibility','visible');
-
         if(searchtimer){
             clearTimeout(searchtimer);
         }
         searchtimer = setTimeout(function(){
-            search(q);
+            var q = $('#search_box').val();
+
+            if(q === currentSearch){
+                $('#loading_logo').css('visibility','hidden');
+                return;
+            }
+            if(q === ''){
+                currentSearch = q;
+                $("#tablecontainer")[0].innerHTML = '';
+                $('#loading_logo').css('visibility','hidden');
+                return;
+            }
+
+            $.get('<?php echo base_url(); ?>index.php/content_table/?q='+q,function(data){
+                currentSearch = q;
+                $("#tablecontainer")[0].innerHTML = data;
+                $('#loading_logo').css('visibility','hidden');
+            });
         },600);
+
+
     }
+
 </script>
 
 
@@ -83,7 +66,7 @@
 
 <div id="search_container">
     <div id="search_padding">
-        <input id="search_box" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="speechSearch();" onwebkitspeechchange="speechSearch();" size=200/>
+        <input id="search_box" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="search();" onwebkitspeechchange="search();" size=200/>
     </div>
     <div id="loading_logo">
         <div id="facebookG">
