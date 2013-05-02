@@ -17,7 +17,7 @@ class content_table extends CI_Controller{
         $config["full_tag_close"] = "</div>";
 
         if($q){
-            $config["total_rows"] = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where (UPPER(course_data.title) LIKE UPPER('%".$q."%') OR UPPER(course_data.short_desc) LIKE UPPER('%".$q."%') OR UPPER(course_data.category) LIKE UPPER('%".$q."%')) AND coursedetails.id  = course_data.id GROUP BY course_data.id")->num_rows();
+            $config["total_rows"] = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where (UPPER(course_data.title) LIKE UPPER('%".$q."%') OR UPPER(course_data.short_desc) LIKE UPPER('%".$q."%') OR UPPER(course_data.category) LIKE UPPER('%".$q."%') OR UPPER(coursedetails.profname) LIKE UPPER('%".$q."%')) AND coursedetails.id  = course_data.id GROUP BY course_data.id")->num_rows();
         }else{
             $config["total_rows"] = $this->db->get("course_data")->num_rows();
         }
@@ -33,7 +33,7 @@ class content_table extends CI_Controller{
         }
 
         if($q){
-            $recxx = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where (UPPER(course_data.title) LIKE UPPER('%".$q."%') OR UPPER(course_data.short_desc) LIKE UPPER('%".$q."%') OR UPPER(course_data.category) LIKE UPPER('%".$q."%')) AND coursedetails.id  = course_data.id GROUP BY course_data.id");
+            $recxx = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where (UPPER(course_data.title) LIKE UPPER('%".$q."%') OR UPPER(course_data.short_desc) LIKE UPPER('%".$q."%') OR UPPER(course_data.category) LIKE UPPER('%".$q."%') OR UPPER(coursedetails.profname) LIKE UPPER('%".$q."%')) AND coursedetails.id  = course_data.id GROUP BY course_data.id");
         }else{
             $recxx = $this->db->query("SELECT course_image,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where coursedetails.id  = course_data.id GROUP BY course_data.id LIMIT ".$seg.",".$config["per_page"]);
         }
