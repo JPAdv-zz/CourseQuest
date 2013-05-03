@@ -108,6 +108,7 @@
     <div id="search_padding">
         <input id="search_box" value="math" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="search();" onwebkitspeechchange="search();" size=200/>
     </div>
+
     <div id="loading_logo">
         <div id="facebookG">
             <div id="blockG_1" class="facebook_blockG">
