@@ -4,7 +4,6 @@
     var currentView = 'gridView';
 
     $(document).ready(function(){
-
         $.getJSON(
             '<?php echo base_url(); ?>index.php/api/get_tags/?callback=?',function(data){
                 $( "#search_box" ).autocomplete({
@@ -83,7 +82,7 @@
                 var elem = document.createElement('div');
                 elem.className = 'grid_result_item';
                 elem.innerHTML ="<div class='play-button-container'><div onclick='loadPreviewVideo(\""+data[i].video_link+"\")' class='play-button'></div></div>"+
-                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><div class='result_title'>"+data[i].title+"</div></div>";
+                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><a href='"+data[i].course_link+"' class='result_title'>"+data[i].title+"</a></div>";
 
                 df.appendChild(elem);
             }

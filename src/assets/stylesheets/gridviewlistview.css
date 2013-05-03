@@ -16,6 +16,27 @@
     -moz-box-shadow: 0 0 4px gray;
     -o-box-shadow: 0 0 4px gray;
 }
+
+.grid_result_item a{
+    text-decoration: none;
+    color: white;
+    color: rgba(255,255,255,.9);
+}
+
+.grid_result_item a:hover{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 8px white;
+    -webkit-text-shadow: 0 0 8px white;
+    -moz-text-shadow: 0 0 8px white;
+    -o-text-shadow: 0 0 8px white;
+}
+.grid_result_item a:active{
+    text-decoration: none;
+    color: white;
+    color: rgba(255,255,255,.7);
+}
+
 .grid_result_item .play-button-container{
     opacity: 1;
 }
