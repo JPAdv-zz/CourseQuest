@@ -4,6 +4,21 @@
     var currentView = 'gridView';
 
     $(document).ready(function(){
+
+        $( document ).tooltip({
+            position: {
+                my: "center bottom-20",
+                at: "center top",
+                using: function( position, feedback ) {
+                    $( this ).css( position );
+                    $( "<div>" )
+                        .addClass( "arrow" )
+                        .addClass( feedback.vertical )
+                        .addClass( feedback.horizontal )
+                        .appendTo( this );
+                }
+            }
+        });
         $.getJSON(
             '<?php echo base_url(); ?>index.php/api/get_tags/?callback=?',function(data){
                 $( "#search_box" ).autocomplete({
@@ -82,7 +97,7 @@
                 var elem = document.createElement('div');
                 elem.className = 'grid_result_item';
                 elem.innerHTML ="<div class='play-button-container'><div onclick='loadPreviewVideo(\""+data[i].video_link+"\")' class='play-button'></div></div>"+
-                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><a href='"+data[i].course_link+"' class='result_title'>"+data[i].title+"</a></div>";
+                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><a href='"+data[i].course_link+"' class='result_title'>"+data[i].title+"</a><strong style='float:right;cursor:pointer;' title='Description: "+data[i].short_desc+" / Start Date is "+data[i].start_date+". / Duration is "+data[i].course_length+" weeks.'><em>i</em></strong></div>";
 
                 df.appendChild(elem);
             }
