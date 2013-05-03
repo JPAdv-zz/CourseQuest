@@ -7,7 +7,7 @@ class course_details extends CI_Model {
         $data = array(
             "id" => $o->id,
             "profname" => trim($o->first_name)." ".trim($o->last_name),
-            "profimage" => trim($o->photo)
+            "profimage" => trim($o->photo_150)
         );
 
         $this->db->insert('coursedetails',$data);
