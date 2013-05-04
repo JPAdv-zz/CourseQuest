@@ -64,11 +64,24 @@
     margin: 0;
     padding: 3px 4px;
     height: 30px;
+    position: relative;
 }
 
 .grid_view_more_info{
+    position: absolute;
+    top: 3px;
+    right: 4px;
     float:right;
     cursor:pointer;
-    font-size: 16px;
-    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+    background: #efefef;
+    color: #333;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -o-border-radius: 25px;
+    height:16px;
+    width: 16px;
+    text-align:center;
 }
