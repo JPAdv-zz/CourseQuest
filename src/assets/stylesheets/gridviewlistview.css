@@ -23,7 +23,7 @@
     color: rgba(255,255,255,.9);
 }
 
-.grid_result_item a:hover{
+grid_view_more_info:hover, .grid_result_item a:hover{
     text-decoration: none;
     color: white;
     text-shadow: 0 0 8px white;
@@ -31,6 +31,7 @@
     -moz-text-shadow: 0 0 8px white;
     -o-text-shadow: 0 0 8px white;
 }
+
 .grid_result_item a:active{
     text-decoration: none;
     color: white;
@@ -72,6 +73,9 @@
     position: relative;
 }
 
+.grid_result_item:hover .grid_view_more_info{
+    opacity: 1;
+}
 .grid_view_more_info{
     position: absolute;
     top: 3px;
@@ -88,5 +92,6 @@
     -o-border-radius: 25px;
     height:16px;
     width: 16px;
+    opacity: 0;
     text-align:center;
 }
