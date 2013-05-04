@@ -10,7 +10,6 @@
     color: white;
     color: rgba(255,255,255,.9);
     background: #333;
-    line-height: 14px;
     box-shadow: 0 0 4px gray;
     -webkit-box-shadow: 0 0 4px gray;
     -moz-box-shadow: 0 0 4px gray;
@@ -62,7 +61,13 @@
 .grid_result_item .result_details{
     margin: 0;
     padding: 3px 4px;
-    height: 30px;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+    line-height: 14px;
+}
+
+.grid_result_item .play-button-container{
     position: relative;
 }
 
@@ -74,8 +79,8 @@
     cursor:pointer;
     font-size: 14px;
     line-height: 16px;
-    background: #efefef;
-    color: #333;
+    background: #333;
+    color: #efefef;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
