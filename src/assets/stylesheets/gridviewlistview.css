@@ -58,6 +58,7 @@ grid_view_more_info:hover, .grid_result_item a:hover{
     margin: 0;
     padding: 0;
     opacity: 0;
+    display : block;
 }
 
 .grid_result_item .result_details{
