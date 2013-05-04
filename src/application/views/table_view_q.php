@@ -31,6 +31,6 @@ function filterRecord($s){
 
     return $s;
 }
-?>
 
-    <?    echo $this->table->generate($records); ?>
+
+    echo $this->table->generate($records); ?>

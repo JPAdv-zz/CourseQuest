@@ -5,52 +5,65 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,.5);
-    border-bottom: 1px solid black;
+    background: #5B6068;
+    background: rgba(50,50,50,0.8);
+    border-bottom: 1px solid rgb(80,80,80);
     z-index: 103;
     box-shadow: 0 0 25px gray;
-    -webkit-box-shadow: 0 0 25px gray;
-    -moz-box-shadow: 0 0 25px gray;
-    -o-box-shadow: 0 0 25px gray;
+    -webkit-box-shadow: 0 1px 5px gray;
+    -moz-box-shadow: 0 1px 5px gray;
+    -o-box-shadow: 0 0 1px gray;
 }
+
 #search_padding{
     display: inline-block;
-    background: #e0e0e0;
-    background: rgba(255,255,255,.6);
     padding: 4px 8px;
     margin: 0px auto;
-    box-shadow: 0 0 8px gray;
-    -webkit-box-shadow: 0 0 16px gray;
-    -moz-box-shadow: 0 0 16px gray;
-    -o-box-shadow: 0 0 16px gray;
 }
 
 #search_box{
     text-align: left;
+    top: 5px;
     width: 350px;
     padding: 5px;
     font-size: 16px;
     color: #666;
-    border: 1px solid white;
+    border: 1px solid #5d5d5d;
     outline: none;
+}
+
+input#search_box.ui-autocomplete-input:hover {
+    border: solid 1px #4b4f57;
+    color:#555;
+    box-shadow: inset 0px 1px 1px rgba(70,70,70,0.6);
+}
+
+input#search_box.ui-autocomplete-input:focus {
+    border: solid 1px #4b4f57;
+    box-shadow: inset 0px 1px 2px rgba(70,70,70,0.6);
+    transition: border .7s;
+    -webkit-transition: border .7s;
+    -moz-transition: border .7s;
+    -o-transition: border .7s;
 }
 
 #loading_logo{
     display: inline-block;
+    position: fixed;
     margin-left: 8px;
     visibility: hidden;
     vertical-align: top;
 }
 
 #facebookG{
-    width:59px
+    width:49px
 }
 
 .facebook_blockG{
-    background-color:#FFFFFF;
-    border:1px solid #000000;
+    background-color:#ededed;
+    border:1px solid rgba(100,100,100);
     float:left;
-    height:42px;
+    height:32px;
     margin-left:3px;
     width:11px;
     opacity:0.1;

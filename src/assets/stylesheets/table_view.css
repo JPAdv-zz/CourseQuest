@@ -4,7 +4,7 @@
 */
 
 #tablecontainer{
-    width: 1200px;
+    min-width: 600px;
     margin : auto;
 }
 
@@ -37,9 +37,7 @@ table {
 }
 
 #tablecontainer tr:nth-child(n):hover {
-    background-color: rgba(0,0,0,.5);
-    border-right-color: rgba(0,0,0,.5);
-    border-left-color: rgba(0,0,0,.5);
+    background-color: rgba(50,50,50,0.8);
     color: #efefef;
     z-index: 10px;
 }
@@ -81,6 +79,10 @@ td:not(first-child) {
 
 td:last-child{
     border-right: none;
+}
+
+.ui-widget-content a{
+    color: #000; 
 }
 
 th {

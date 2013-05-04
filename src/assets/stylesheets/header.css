@@ -1,0 +1,103 @@
+header {
+  display: block;
+  z-index: 100;
+  background-image: url(bgFoot.png);
+  background-color: #353535;
+	position: fixed;
+  width: 100%;
+  margin: auto;
+  min-width:900px;
+  padding: 10px;
+  height: 26px;
+  border-bottom: solid 4px #808080;// #87a635; Goes with green.
+
+	}
+
+  header ul {
+    float: right;
+    list-style: none;
+  }
+
+  header ul li {
+
+      float: left;
+          margin-left: 10px;
+  }
+
+/*
+  #logo {
+    position: relative;
+    top: -53px;
+    width: 130px;
+    height: 19px;
+    right: 20px;
+    //text-shadow: 0 1px 3px rgba(0,0,0,0.75);
+    margin: 30px;
+    float: left;
+    font-size: 1.8em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-bottom: solid 4px #808080;
+    font-weight: bold;
+    &:hover {
+      border-bottom: solid 4px #2585ff;
+      text-decoration: none;
+    }
+  }
+ a{
+    color: #000;
+      &:visited {
+      color: #666;
+      }
+      &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.nav-btn {
+  position: relative;
+  display: block;
+  top: -19px;
+  padding: 20px;
+  width: auto;
+  height: 5px;
+  margin: 10px;
+  text-align: center;
+  //text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+  color: #fff;
+  border-bottom: solid 4px #808080;
+  font-weight: bold;
+  &:hover {
+    color: #fff;
+    border-bottom: solid 4px #8D13BA;
+    text-decoration: none;
+  }
+}
+
+#nav-hom {
+  left: 90px;
+  &:hover {
+    border-bottom: solid 4px #2585ff;
+    text-decoration: none;
+  }
+}
+
+#nav-tut {
+  left: 60px;
+  &:hover {
+    border-bottom: solid 4px #5BBA13;
+    text-decoration: none;
+  }
+}
+
+#nav-dwn {
+  left: 30px;
+  &:hover {
+    border-bottom: solid 4px #BA4D13;
+    text-decoration: none;
+  }
+}
+*/

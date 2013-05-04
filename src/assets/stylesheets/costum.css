@@ -1,7 +1,12 @@
+@import url("./footer.css");
+@import url("./header.css");
+
 html {
 	font-family: 'Roboto Condensed', sans-serif;
 	margin 0;
 	padding 0;
+	min-width: 800px;
+	min-height: 800px;
 }
 
 body {
