@@ -15,6 +15,7 @@
     -webkit-box-shadow: 0 0 4px gray;
     -moz-box-shadow: 0 0 4px gray;
     -o-box-shadow: 0 0 4px gray;
+    cursor: pointer;
 }
 
 .grid_result_item a {
