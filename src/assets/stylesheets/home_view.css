@@ -259,7 +259,7 @@ input#search_box.ui-autocomplete-input:focus {
         top: auto;
 }
 
-.ui-menu-item .us-state-focus{
+.ui-menu-item .ui-state-focus{
     background : #333;
     background-image: none;
     border : 1px solid #333;
