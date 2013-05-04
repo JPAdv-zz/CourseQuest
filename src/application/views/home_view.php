@@ -99,8 +99,8 @@
             for(var i = 0; i < data.length; i++){
                 var elem = document.createElement('div');
                 elem.className = 'grid_result_item';
-                elem.innerHTML ="<div class='play-button-container'><div onclick='loadPreviewVideo(\""+data[i].video_link+"\")' class='play-button'></div></div>"+
-                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><a href='"+data[i].course_link+"' class='result_title'>"+data[i].title+"</a><div class='grid_view_more_info' title='Description: "+data[i].short_desc+" / Start Date is "+data[i].start_date+". / Duration is "+data[i].course_length+" weeks.'>i</div></div>";
+                elem.innerHTML ="<div class='play-button-container'><div onclick='loadPreviewVideo(\""+data[i].video_link+"\")' class='play-button'></div><div class='grid_view_more_info' title='Description: "+data[i].short_desc+" / Start Date is "+data[i].start_date+". / Duration is "+data[i].course_length+" weeks.'>i</div></div>"+
+                    "<img class='result_img an-tr-op' onload='this.style.opacity = 1;' onclick='loadPreviewVideo(\""+data[i].video_link+"\");' src='"+data[i].course_image+"'/><div class='result_details'><a href='"+data[i].course_link+"' class='result_title'>"+data[i].title+"</a></div>";
 
                 df.appendChild(elem);
             }
