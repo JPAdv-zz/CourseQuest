@@ -16,5 +16,4 @@
             <link rel="stylesheet" href="<?php echo base_url(); ?>assets/stylesheets/home_view.css" type="text/css" media="screen" charset="utf-8"/>
         </head>
 
-        <body>
-    
+        <body>    
