@@ -64,3 +64,10 @@
     padding: 3px 4px;
     height: 30px;
 }
+
+.grid_view_more_info{
+    float:right;
+    cursor:pointer;
+    font-size: 16px;
+    font-style: italic;
+}
