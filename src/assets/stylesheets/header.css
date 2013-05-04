@@ -1,61 +1,38 @@
 header {
   display: block;
-  z-index: 100;
-  background-image: url(bgFoot.png);
-  background-color: #353535;
+  z-index: -1;
 	position: fixed;
-  width: 100%;
   margin: auto;
-  min-width:900px;
-  padding: 10px;
+  padding: 5px;
   height: 26px;
-  border-bottom: solid 4px #808080;// #87a635; Goes with green.
-
 	}
 
   header ul {
     float: right;
     list-style: none;
+    position: fixed;
+    top: -3px;
+    right: 10px;
   }
 
-  header ul li {
 
-      float: left;
-          margin-left: 10px;
-  }
-
-/*
   #logo {
     position: relative;
-    top: -53px;
+    top:-30px;
     width: 130px;
     height: 19px;
     right: 20px;
-    //text-shadow: 0 1px 3px rgba(0,0,0,0.75);
     margin: 30px;
     float: left;
-    font-size: 1.8em;
+    font-size: 1.7em;
     color: #fff;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: -1px;
-    border-bottom: solid 4px #808080;
     font-weight: bold;
-    &:hover {
-      border-bottom: solid 4px #2585ff;
-      text-decoration: none;
-    }
-  }
- a{
-    color: #000;
-      &:visited {
-      color: #666;
-      }
-      &:hover {
-      color: #fff;
-      background-color: #000;
-    }
   }
 }
+
 
 .nav-btn {
   position: relative;
@@ -66,7 +43,6 @@ header {
   height: 5px;
   margin: 10px;
   text-align: center;
-  //text-shadow: 0 1px 1px rgba(0,0,0,0.75);
   color: #fff;
   border-bottom: solid 4px #808080;
   font-weight: bold;
@@ -100,4 +76,3 @@ header {
     text-decoration: none;
   }
 }
-*/

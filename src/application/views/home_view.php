@@ -122,6 +122,18 @@
 </div>
 
 <div id="search_container">
+            <!-- The main header of the site. -->
+            <header class="nav-bar">    
+                <div class="nav-inner">
+                    <a href="<?php echo base_url()."index.php/home"; ?>" class="nav-btn" id="logo">CourseQuest</a>
+                    <div class="nav-container">
+                        <ul>
+                            <button class="button_1" id="list_view_button" onclick="currentView = 'listView';search(true);">List View</button>
+                            <button class="button_1" id="grid_view_button" onclick="currentView = 'gridView';search(true);">Grid View</button>
+                        </ul>
+                    </div>
+                 </div>
+            </header>
     <div id="search_padding">
         <input id="search_box" value="math" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="search();" onwebkitspeechchange="search();" size=300/>
     </div>
@@ -138,11 +150,6 @@
     </div>
 
 </div>
-
-<nav class="view_selectors">
-    <button class="button_1" id="list_view_button" onclick="currentView = 'listView';search(true);">List View</button>
-    <button class="button_1" id="grid_view_button" onclick="currentView = 'gridView';search(true);">Grid View</button>
-</nav>
 
 <div id="tablecontainer">
 

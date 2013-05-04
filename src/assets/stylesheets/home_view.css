@@ -25,11 +25,13 @@
     text-align: left;
     top: 5px;
     width: 350px;
-    padding: 5px;
+    padding: 6px;
     font-size: 16px;
     color: #666;
     border: 1px solid #5d5d5d;
     outline: none;
+    position: relative;
+    top: 50%;
 }
 
 input#search_box.ui-autocomplete-input:hover {
@@ -69,11 +71,10 @@ input#search_box.ui-autocomplete-input:focus {
     background-color:#ededed;
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
-    border-radius:6px;
+    border-radius:1px;
     border:1px solid #dcdcdc;
     display:inline-block;
     color:#777777;
-    font-family:arial;
     font-size:15px;
     font-weight:bold;
     padding:6px 24px;

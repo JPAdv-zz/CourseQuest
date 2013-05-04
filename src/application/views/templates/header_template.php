@@ -17,18 +17,4 @@
         </head>
 
         <body>
-                    <!-- The main header of the site. -->
-            <header class="nav-bar">    
-                <div class="nav-inner">
-                    <a href="<?php echo base_url(); ?>" class="nav-btn" id="logo">CourseQuest</a>
-                    <div class="nav-container">
-                        <ul>
-                            <li><a href="/" class="nav-btn" id="nav-hom">Home</a></li>
-                            <li><a href="/tutorials" class="nav-btn" id="nav-tut">Tutorials</a></li>
-                            <li><a href="/downloads" class="nav-btn" id="nav-dwn">Downloads</a></li>
-                            <li><a href="/contact" class="nav-btn">Contact</a></li>
-                        </ul>
-                    </div>
-                 </div>
-            </header>
     

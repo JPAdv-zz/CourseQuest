@@ -1,4 +1,4 @@
-.grid_result_item{
+.grid_result_item {
     width: 170px;
     display: inline-block;
     margin: 0;
@@ -17,7 +17,7 @@
     -o-box-shadow: 0 0 4px gray;
 }
 
-.grid_result_item a{
+.grid_result_item a {
     text-decoration: none;
     color: white;
     color: rgba(255,255,255,.9);
@@ -42,7 +42,7 @@
 }
 
 .view_selectors{
-    margin-top: 70px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 

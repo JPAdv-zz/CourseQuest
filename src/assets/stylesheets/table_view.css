@@ -4,6 +4,7 @@
 */
 
 #tablecontainer{
+    padding-top: 70px;
     min-width: 600px;
     margin : auto;
 }

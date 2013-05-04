@@ -20,3 +20,8 @@ body {
 	-o-transition : opacity 1s;
 	-moz-transition : opacity 1s;
 }
+
+.box_container {
+	width: auto;
+	height: 100%;
+}
