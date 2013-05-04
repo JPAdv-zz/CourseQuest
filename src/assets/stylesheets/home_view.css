@@ -260,9 +260,9 @@ input#search_box.ui-autocomplete-input:focus {
 }
 
 .ui-menu-item a:hover{
-    background : #333;
-    background-image: none;
-    border : 1px solid #333;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
+    background : #333;
+    background-image: none;
+    border : 1px solid #333;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
 }
