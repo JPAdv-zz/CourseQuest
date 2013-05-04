@@ -55,6 +55,7 @@ input#search_box.ui-autocomplete-input:focus {
     margin-left: 8px;
     visibility: hidden;
     vertical-align: top;
+    top: 14px;
 }
 
 #facebookG{
