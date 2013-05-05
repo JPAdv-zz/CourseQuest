@@ -19,6 +19,11 @@
                 }
             }
         });
+
+        $.get('<?php echo base_url(); ?>index.php/api/featured_courses',function(data){
+            renderJsonResults(data,'featured_courses');
+        });
+
         $.getJSON(
             '<?php echo base_url(); ?>index.php/api/get_tags/?callback=?',function(data){
                 $( "#search_box" ).autocomplete({
@@ -72,12 +77,12 @@
             if(currentView == 'listView'){
                 $.get('<?php echo base_url(); ?>index.php/content_table/?q='+encodeURI(q),function(data){
                     currentSearch = q;
-                    renderResults(data);
+                    renderJsonResults(data,'tablecontainer');
                 });
             }else if(currentView == 'gridView'){
                 $.get('<?php echo base_url(); ?>index.php/api/search/?q='+encodeURI(q),function(data){
                     currentSearch = q;
-                    renderResults(data);
+                    renderJsonResults(data,'tablecontainer');
                 });
             }
 
@@ -87,9 +92,9 @@
 
     }
 
-    function renderResults(data){
+    function renderJsonResults(data,id){
         if(currentView == 'listView'){
-            $("#tablecontainer")[0].innerHTML = data;
+            $("#"+id)[0].innerHTML = data;
             $('#list_view_button').addClass('active');
             $('#grid_view_button').removeClass('active');
         }else if(currentView == 'gridView'){
@@ -105,8 +110,8 @@
                 df.appendChild(elem);
             }
 
-            $("#tablecontainer").empty();
-            $("#tablecontainer")[0].appendChild(df);
+            $("#"+id).empty();
+            $("#"+id)[0].appendChild(df);
             $('#grid_view_button').addClass('active');
             $('#list_view_button').removeClass('active');
         }
@@ -135,7 +140,7 @@
                  </div>
             </header>
     <div id="search_padding">
-        <input id="search_box" value="math" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="search();" onwebkitspeechchange="search();" size=300/>
+        <input id="search_box" placeholder="What would you like to learn?" type="text" name="q" speech="speech" x-webkit-speech="x-webkit-speech" onspeechchange="search();" onwebkitspeechchange="search();" size=300/>
     </div>
 
     <div id="loading_logo">
@@ -152,5 +157,10 @@
 </div>
 
 <div id="tablecontainer">
+
+</div>
+
+<h3>Featured Courses</h3>
+<div id="featured_courses">
 
 </div>
