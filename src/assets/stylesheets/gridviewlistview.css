@@ -50,6 +50,10 @@ grid_view_more_info:hover, .grid_result_item a:hover{
 .grid_result_item .play-button{
     top: 33px;
     left: 68px;
+    opacity: 0;
+}
+.grid_result_item:hover .play-button{
+    opacity: 1;
 }
 
 .grid_result_item .result_img{
