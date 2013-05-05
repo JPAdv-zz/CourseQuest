@@ -38,7 +38,7 @@ class api extends CI_Controller{
     function featured_courses(){
 
 
-        $rec = $this->db->query("SELECT course_image,short_desc,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where coursedetails.id  = course_data.id GROUP BY course_data.id ORDER BY start_date DESC LIMIT 0,25");
+        $rec = $this->db->query("SELECT course_image,short_desc,course_link,title,category,start_date,course_length,profname,profimage,site,video_link FROM course_data,coursedetails where coursedetails.id  = course_data.id AND start_date  GROUP BY course_data.id ORDER BY start_date DESC LIMIT 0,25");
 
         $this->output
             ->set_content_type('application/json')

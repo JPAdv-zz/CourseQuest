@@ -62,7 +62,7 @@
         }
         searchtimer = setTimeout(function(){
             var q = $('#search_box').val();
-
+            $('#search_term')[0].innerHTML = q;
             if(q === currentSearch & force !== true){
                 $('#loading_logo').css('visibility','hidden');
                 return;
@@ -156,6 +156,7 @@
 
 </div>
 
+<h3 id="search_term"></h3>
 <div id="tablecontainer">
 
 </div>
