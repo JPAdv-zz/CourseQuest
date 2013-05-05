@@ -156,8 +156,8 @@
 
 </div>
 
-<h3 id="search_term"></h3>
-<div id="tablecontainer">
+<h3 id="search_term" style="margin-top: 70px;"></h3>
+<div id="tablecontainer" style="padding-top: 0;">
 
 </div>
 

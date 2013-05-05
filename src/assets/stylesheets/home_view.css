@@ -266,3 +266,9 @@ input#search_box.ui-autocomplete-input:focus {
     border-radius: 0px;
     -webkit-border-radius: 0px;
 }
+
+h3{
+    margin: 5px 10px;
+    padding: 0 0 0 5px;
+    border-left: 4px solid #333;
+}
