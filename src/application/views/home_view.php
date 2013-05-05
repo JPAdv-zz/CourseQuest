@@ -69,6 +69,7 @@
             if(q === ''){
                 currentSearch = q;
                 $("#tablecontainer")[0].innerHTML = '';
+                $('#search_term')[0].innerHTML = '';
                 $('#loading_logo').css('visibility','hidden');
                 return;
             }
