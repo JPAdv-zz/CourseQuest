@@ -62,7 +62,6 @@
         }
         searchtimer = setTimeout(function(){
             var q = $('#search_box').val();
-            $('#search_term')[0].innerHTML = q;
             if(q === currentSearch & force !== true){
                 $('#loading_logo').css('visibility','hidden');
                 return;
@@ -85,6 +84,8 @@
                     renderJsonResults(data,'tablecontainer');
                 });
             }
+
+            $('#search_term')[0].innerHTML = q;
 
 
         },600);
