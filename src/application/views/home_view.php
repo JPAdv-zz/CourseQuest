@@ -177,6 +177,7 @@
 
 </div>
 
+<div class="ui-separator1"></div>
 <h3>Featured Courses</h3>
 <div id="featured_courses">
 
