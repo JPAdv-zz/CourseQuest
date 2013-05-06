@@ -38,7 +38,8 @@
                             'width': '358px',
                             'border-color' : 'white',
                             'border-radius' : '0px',
-                            'font-size' : '14px'
+                            'font-size' : '14px',
+                            'position' : 'fixed'
                         });
                         return false;
                     },
@@ -82,16 +83,19 @@
             if(currentView == 'listView'){
                 $.get('<?php echo base_url(); ?>index.php/content_table/?q='+encodeURI(q),function(data){
                     currentSearch = q;
-                    renderJsonResults(data,'tablecontainer');
+                    renderJsonResults(data,'tablecontainer',false,function(){
+                        $('#search_term')[0].innerHTML = q;
+                    });
                 });
             }else if(currentView == 'gridView'){
                 $.get('<?php echo base_url(); ?>index.php/api/search/?q='+encodeURI(q),function(data){
                     currentSearch = q;
-                    renderJsonResults(data,'tablecontainer');
+                    renderJsonResults(data,'tablecontainer',false,function(){
+                        $('#search_term')[0].innerHTML = q;
+                    });
                 });
             }
 
-            $('#search_term')[0].innerHTML = q;
 
 
         },600);
@@ -99,7 +103,7 @@
 
     }
 
-    function renderJsonResults(data,id,viewType){
+    function renderJsonResults(data,id,viewType,cb){
         var view = viewType || currentView;
         if(view == 'listView'){
             $.jStorage.set('currentView', 'listView');
@@ -125,6 +129,9 @@
             $('#list_view_button').removeClass('active');
         }
         $('#loading_logo').css('visibility','hidden');
+        if(cb){
+            cb();
+        }
     }
 
 </script>
