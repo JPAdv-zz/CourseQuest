@@ -5,6 +5,8 @@
             <title>CourseQuest</title>
             <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
             <script src="<?php echo base_url(); ?>assets/javascript/jquery.tablesorter.min.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>assets/javascript/json2.js" type="text/javascript"></script>
+            <script src="<?php echo base_url(); ?>assets/javascript/jstorage.min.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/javascript/table_sort.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/javascript/jquery-ui.js" type="text/javascript"></script>
             <script src="<?php echo base_url(); ?>assets/javascript/course_player.js" type="text/javascript"></script>

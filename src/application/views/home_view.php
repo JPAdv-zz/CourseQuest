@@ -1,7 +1,7 @@
 <script>
     var searchtimer;
     var currentSearch;
-    var currentView = 'gridView';
+    var currentView = $.jStorage.get('currentView') || 'gridView';
 
     $(document).ready(function(){
 
@@ -21,7 +21,7 @@
         });
 
         $.get('<?php echo base_url(); ?>index.php/api/featured_courses',function(data){
-            renderJsonResults(data,'featured_courses');
+            renderJsonResults(data,'featured_courses','gridView');
         });
 
         $.getJSON(
@@ -47,6 +47,10 @@
             }
         );
 
+
+        var q = $.jStorage.get('search_box') || '';
+        $('#search_box').val(q);
+
         if($('#search_box').val() !== ''){
             search();
         }
@@ -62,6 +66,7 @@
         }
         searchtimer = setTimeout(function(){
             var q = $('#search_box').val();
+            $.jStorage.set('search_box',q);
             if(q === currentSearch & force !== true){
                 $('#loading_logo').css('visibility','hidden');
                 return;
@@ -94,13 +99,15 @@
 
     }
 
-    function renderJsonResults(data,id){
-        if(currentView == 'listView'){
+    function renderJsonResults(data,id,viewType){
+        var view = viewType || currentView;
+        if(view == 'listView'){
+            $.jStorage.set('currentView', 'listView');
             $("#"+id)[0].innerHTML = data;
             $('#list_view_button').addClass('active');
             $('#grid_view_button').removeClass('active');
-        }else if(currentView == 'gridView'){
-
+        }else if(view == 'gridView'){
+            $.jStorage.set('currentView', 'gridView');
             var df = document.createDocumentFragment();
 
             for(var i = 0; i < data.length; i++){
