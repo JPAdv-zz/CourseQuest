@@ -73,6 +73,19 @@ You can use github's GUI client:
 -	[Windows Version](http://windows.github.com)
 -	Ubuntu Versions: There are a couple of open sourced projects. [Use Google](http://www.google.com)
 
+Configuration:
+--------------
+
+CourseQuest is built using the [CodeIgniter](http://www.codeigniter.com) framework. To be able to properly
+run the application, a few configurations need to be made.
+
+* 	Go to the following directory
+
+		CourseQuest/src/application/config/
+
+*	Modify *config.php* and *database.php* files using your editor.
+
+
 What happens next?:
 -------------------
 
